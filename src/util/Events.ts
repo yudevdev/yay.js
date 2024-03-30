@@ -4,7 +4,7 @@
  * @remarks
  * WebSocket通信等でリッスンするイベントです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export const Events: { [key: string]: string } = {

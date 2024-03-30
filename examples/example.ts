@@ -10,7 +10,7 @@ const main = async () => {
 
 	await client.createPost({
 		text: 'Hello with yay.js!',
-		sharedUrl: 'https://github.com/qvco/yay.js',
+		sharedUrl: 'https://github.com/ekkx/yay.js',
 	});
 };
 

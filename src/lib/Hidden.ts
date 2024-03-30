@@ -7,7 +7,7 @@ import { HiddenResponse } from '../util/Responses';
  * @remarks
  * コンテンツやユーザーを非表示にするAPIのエンドポイントと連携するためのクラスです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export class HiddenAPI {

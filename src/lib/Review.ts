@@ -7,7 +7,7 @@ import { ReviewsResponse } from '../util/Responses';
  * @remarks
  * レターAPIのエンドポイントと連携するためのクラスです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export class ReviewAPI {

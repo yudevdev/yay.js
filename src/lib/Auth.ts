@@ -9,7 +9,7 @@ import * as util from '../util/Utils';
  * @remarks
  * 認証APIのエンドポイントと連携するためのクラスです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export class AuthAPI {

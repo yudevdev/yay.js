@@ -89,14 +89,14 @@ import { objectToSnake } from '../util/CaseConverter';
  *
  *		await client.createPost({
  *			text: 'Hello with yay.js!',
- *			sharedUrl: 'https://github.com/qvco/yay.js',
+ *			sharedUrl: 'https://github.com/ekkx/yay.js',
  *		});
  * };
  *
  * main();
  * ```
  *
- * @see {@link https://qvco.github.io/yay.js/classes/Client | ドキュメントを参照}
+ * @see {@link https://ekkx.github.io/yay.js/classes/Client | ドキュメントを参照}
  *
  */
 export class Client extends BaseClient {
@@ -117,7 +117,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `PUT`: {@link https://api.yay.space/v1/users/change_email}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#changeEmail | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#changeEmail | ドキュメントを参照}
 	 *
 	 */
 	public changeEmail = async (options: {
@@ -136,7 +136,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `PUT`: {@link https://api.yay.space/v1/users/change_password}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#changePassword | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#changePassword | ドキュメントを参照}
 	 *
 	 */
 	public changePassword = async (options: {
@@ -156,7 +156,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/api/v1/oauth/token}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getToken | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getToken | ドキュメントを参照}
 	 *
 	 */
 	public getToken = async (options: {
@@ -178,7 +178,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v3/users/login_with_email}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#login | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#login | ドキュメントを参照}
 	 *
 	 */
 	public login = async (options: { email: string; password: string }): Promise<LoginUserResponse> => {
@@ -192,7 +192,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/users/logout}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#logout | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#logout | ドキュメントを参照}
 	 *
 	 */
 	public logout = async () => {
@@ -208,7 +208,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/api/v1/oauth/token/migrate}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#migrateToken | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#migrateToken | ドキュメントを参照}
 	 *
 	 */
 	public migrateToken = async (options: { token: string }) => {
@@ -231,7 +231,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v2/users/device_tokens/new}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#registerDeviceToken | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#registerDeviceToken | ドキュメントを参照}
 	 *
 	 */
 	public registerDeviceToken = async (options: {
@@ -254,7 +254,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v2/users/resend_confirm_email}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#resendConfirmEmail | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#resendConfirmEmail | ドキュメントを参照}
 	 *
 	 */
 	public resendConfirmEmail = async () => {
@@ -270,7 +270,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/api/v1/oauth/token/migrate}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#restoreUser | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#restoreUser | ドキュメントを参照}
 	 *
 	 */
 	public restoreUser = async (options: { userId: number }) => {
@@ -284,7 +284,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `DELETE`: {@link https://api.yay.space/v1/users/device_tokens}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#revokeDeviceTokens | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#revokeDeviceTokens | ドキュメントを参照}
 	 *
 	 */
 	public revokeDeviceTokens = async () => {
@@ -303,7 +303,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v3/users/login_update}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#saveAccountWithEmail | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#saveAccountWithEmail | ドキュメントを参照}
 	 *
 	 */
 	public saveAccountWithEmail = async (options: {
@@ -326,7 +326,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/users/:userId/block}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#blockUser | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#blockUser | ドキュメントを参照}
 	 *
 	 */
 	public blockUser = async (options: { userId: number }) => {
@@ -340,7 +340,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/users/block_ids}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getBlockedUserIds | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getBlockedUserIds | ドキュメントを参照}
 	 *
 	 */
 	public getBlockedUserIds = async (): Promise<number[]> => {
@@ -361,7 +361,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v2/users/blocked}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getBlockedUsers | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getBlockedUsers | ドキュメントを参照}
 	 *
 	 */
 	public getBlockedUsers = async (
@@ -386,7 +386,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v2/users/:userId/unblock}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#unblockUser | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#unblockUser | ドキュメントを参照}
 	 *
 	 */
 	public unblockUser = async (options: { userId: number }) => {
@@ -405,7 +405,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/calls/:callId/bump}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#bumpCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#bumpCall | ドキュメントを参照}
 	 *
 	 */
 	public bumpCall = async (options: { callId: number; participantLimit?: number }) => {
@@ -421,7 +421,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/posts/active_call}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getUserActiveCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getUserActiveCall | ドキュメントを参照}
 	 *
 	 */
 	public getUserActiveCall = async (options: { userId: number }): Promise<PostResponse> => {
@@ -435,7 +435,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/calls/bgm}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getBgms | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getBgms | ドキュメントを参照}
 	 *
 	 */
 	public getBgms = async (): Promise<BgmsResponse> => {
@@ -451,7 +451,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/calls/conferences/:callId}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getCall | ドキュメントを参照}
 	 *
 	 */
 	public getCall = async (options: { callId: number }): Promise<ConferenceCallResponse> => {
@@ -469,7 +469,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/calls/:callId/users/invitable}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getCallInvitableUsers | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getCallInvitableUsers | ドキュメントを参照}
 	 *
 	 */
 	public getCallInvitableUsers = async (options: {
@@ -489,7 +489,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/calls/:callId/users/invitable}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getCallStatus | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getCallStatus | ドキュメントを参照}
 	 *
 	 */
 	public getCallStatus = async (options: { opponentId: number }): Promise<CallStatusResponse> => {
@@ -507,7 +507,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/games/apps}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getGames | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getGames | ドキュメントを参照}
 	 *
 	 */
 	public getGames = async (options: { number: number; gameIds: number[]; fromId?: number }): Promise<GamesResponse> => {
@@ -524,7 +524,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/genres}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getGenres | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getGenres | ドキュメントを参照}
 	 *
 	 */
 	public getGenres = async (options: { number: number; from: number }): Promise<GenresResponse> => {
@@ -543,7 +543,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `GET`: {@link https://api.yay.space/v1/posts/group_calls}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#getGroupCalls | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#getGroupCalls | ドキュメントを参照}
 	 *
 	 */
 	public getGroupCalls = async (
@@ -562,7 +562,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/calls/:callId/bulk_invite}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#inviteOnlineUsersToCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#inviteOnlineUsersToCall | ドキュメントを参照}
 	 *
 	 */
 	public inviteOnlineUsersToCall = async (options: { callId: number; groupId?: number }) => {
@@ -579,7 +579,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/calls/conference_calls/:callId/invite}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#inviteUsersToCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#inviteUsersToCall | ドキュメントを参照}
 	 *
 	 */
 	public inviteUsersToCall = async (options: { callId: number; userIds: number[] }) => {
@@ -597,7 +597,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v2/calls/invite}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#inviteUsersToChatCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#inviteUsersToChatCall | ドキュメントを参照}
 	 *
 	 */
 	public inviteUsersToChatCall = async (options: { chatRoomId?: number; roomId?: number; roomUrl?: string } = {}) => {
@@ -614,7 +614,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/calls/conference_calls/:callId/kick}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#banUserFromCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#banUserFromCall | ドキュメントを参照}
 	 *
 	 */
 	public banUserFromCall = async (options: { callId: number; userId: number }) => {
@@ -631,7 +631,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/anonymous_calls/leave_agora_channel}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#notifyAnonymousUserLeaveCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#notifyAnonymousUserLeaveCall | ドキュメントを参照}
 	 *
 	 */
 	public notifyAnonymousUserLeaveCall = async (options: { conferenceId: number; agoraUid: string }) => {
@@ -648,7 +648,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/calls/leave_agora_channel}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#notifyUserLeaveCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#notifyUserLeaveCall | ドキュメントを参照}
 	 *
 	 */
 	public notifyUserLeaveCall = async (options: { conferenceId: number; userId: number }) => {
@@ -665,7 +665,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `PUT`: {@link https://api.yay.space/v1/calls/screenshot}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#sendCallScreenshot | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#sendCallScreenshot | ドキュメントを参照}
 	 *
 	 */
 	public sendCallScreenshot = async (options: { screenshotFilename: string; conferenceId: number }) => {
@@ -684,7 +684,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `PUT`: {@link https://api.yay.space/v1/calls/:callId}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#startCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#startCall | ドキュメントを参照}
 	 *
 	 */
 	public startCall = async (options: {
@@ -707,7 +707,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `PUT`: {@link https://api.yay.space/v1/calls/:callId/users/:userId}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#setCallUserRole | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#setCallUserRole | ドキュメントを参照}
 	 *
 	 */
 	public setCallUserRole = async (options: { callId: number; userId: number; role: string }) => {
@@ -724,7 +724,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v2/calls/start_conference_call}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#joinCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#joinCall | ドキュメントを参照}
 	 *
 	 */
 	public joinCall = async (options: { conferenceId: number; callSid?: string }): Promise<ConferenceCallResponse> => {
@@ -741,7 +741,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/calls/leave_conference_call}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#leaveCall | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#leaveCall | ドキュメントを参照}
 	 *
 	 */
 	public leaveCall = async (options: { conferenceId: number; callSid?: string }) => {
@@ -758,7 +758,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/anonymous_calls/start_conference_call}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#joinCallAsAnonymous | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#joinCallAsAnonymous | ドキュメントを参照}
 	 *
 	 */
 	public joinCallAsAnonymous = async (options: {
@@ -778,7 +778,7 @@ export class Client extends BaseClient {
 	 * @endpoint
 	 * `POST`: {@link https://api.yay.space/v1/anonymous_calls/leave_conference_call}
 	 *
-	 * @see {@link https://qvco.github.io/yay.js/classes/Client.html#leaveCallAsAnonymous | ドキュメントを参照}
+	 * @see {@link https://ekkx.github.io/yay.js/classes/Client.html#leaveCallAsAnonymous | ドキュメントを参照}
 	 *
 	 */
 	public leaveCallAsAnonymous = async (options: { conferenceId: number; AgoraUid?: string }) => {

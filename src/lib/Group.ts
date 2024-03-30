@@ -23,7 +23,7 @@ import { API_KEY } from '../util/Constants';
  * @remarks
  * サークルAPIのエンドポイントと連携するためのクラスです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export class GroupAPI {
@@ -389,7 +389,7 @@ export class GroupAPI {
    * @param options.groupId - サークルのID
    * @param options.relatedGroupIds - 関連するサークルのID
    *
-   * @see https://github.com/qvco/yay.js
+   * @see https://github.com/ekkx/yay.js
    *
    */
   public removeRelatedGroups = async (options: { groupId: number; relatedGroupIds: number[] }) => {

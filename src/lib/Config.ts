@@ -8,7 +8,7 @@ import { BASE_CONFIG_URL } from '../util/Constants';
  * @remarks
  * アプリの基本情報を取得するAPIのエンドポイントと連携するためのクラスです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export class ConfigAPI {

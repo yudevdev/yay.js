@@ -46,7 +46,7 @@ import EventEmitter from 'node:events';
  * @remarks
  * クライアント処理を担当する、クライアントの基底クラスです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export class BaseClient extends EventEmitter {

@@ -7,7 +7,7 @@ import { CreateMuteKeywordResponse, MuteKeywordResponse } from '../util/Response
  * @remarks
  * 特定のキーワードのミュート設定APIのエンドポイントと連携するためのクラスです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export class MuteKeywordAPI {

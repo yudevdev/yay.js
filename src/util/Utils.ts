@@ -43,7 +43,7 @@ export const getHashedFilename = (att: Attachment, type: string, key: number, uu
  * };
  * ```
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  */
 export const mention = (options: { userId: number; displayName: string }): string => {
 	if (!options.displayName.length) {

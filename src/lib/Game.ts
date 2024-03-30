@@ -7,7 +7,7 @@ import { BaseClient } from '../client/BaseClient';
  * @remarks
  * ゲームAPIのエンドポイントと連携するためのクラスです
  *
- * @see https://github.com/qvco/yay.js
+ * @see https://github.com/ekkx/yay.js
  *
  */
 export class GameAPI {

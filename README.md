@@ -1,7 +1,7 @@
 <div align="center">
     <br />
     <p>
-        <a href="https://github.com/qvco/yay.js"><img src="https://github.com/qvco/yay.js/raw/master/.github/logo-black.svg" width="546" alt="yay.js" /></a>
+        <a href="https://github.com/ekkx/yay.js"><img src="https://github.com/ekkx/yay.js/raw/master/.github/logo-black.svg" width="546" alt="yay.js" /></a>
     </p>
     <br />
     <p>
@@ -11,8 +11,8 @@
 		<a href="https://www.npmjs.com/package/yay.js"><img src="https://img.shields.io/npm/dt/yay.js.svg?maxAge=3600" alt="npm downloads" /></a>
 	</p>
     <p>
-        <a href="https://qvco.github.io/yay.js"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" height=30px></a>
-        <a href="https://qvco.github.io/yay.js"><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" height=30px></a>
+        <a href="https://ekkx.github.io/yay.js"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" height=30px></a>
+        <a href="https://ekkx.github.io/yay.js"><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" height=30px></a>
     </p>
 </div>
 
@@ -25,7 +25,7 @@
 - クッキーに対応
 - API を 100% カバー
 
-[Python 版はこちら](https://github.com/qvco/yaylib)
+[Python 版はこちら](https://github.com/ekkx/yaylib)
 
 ## Installation
 
@@ -58,7 +58,7 @@ const main = async () => {
 
   await client.createPost({
     text: 'Hello with yay.js!',
-    sharedUrl: 'https://github.com/qvco/yay.js',
+    sharedUrl: 'https://github.com/ekkx/yay.js',
   });
 };
 
@@ -92,10 +92,10 @@ client.login({
 
 ## Links
 
-- [Documentation](https://qvco.github.io/yay.js)
-- [GitHub](https://github.com/qvco/yay.js)
+- [Documentation](https://ekkx.github.io/yay.js)
+- [GitHub](https://github.com/ekkx/yay.js)
 - [npm](https://www.npmjs.com/package/yay.js)
-- [For Python](https://github.com/qvco/yaylib)
+- [For Python](https://github.com/ekkx/yaylib)
 - [Discord Server](https://discord.gg/Y8f2K74URa)
 
 ## Contributing
