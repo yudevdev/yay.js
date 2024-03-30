@@ -19,19 +19,19 @@
         "docs": "typedoc",
         "publish": "yarn build && npm publish --access public"
     },
-    "repository": "https://github.com/qvco/yay.js",
+    "repository": "https://github.com/ekkx/yay.js",
     "keywords": [
         "yay",
         "api",
         "bot",
         "nanameue"
     ],
-    "author": "qvco",
+    "author": "ekkx",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/qvco/yay.js/issues"
+        "url": "https://github.com/ekkx/yay.js/issues"
     },
-    "homepage": "https://github.com/qvco/yay.js#readme",
+    "homepage": "https://github.com/ekkx/yay.js#readme",
     "files": [
         "build"
     ],

@@ -2,9 +2,9 @@ export const ID_CHECK_SECRET_KEY = '4aa6d1c301a97154bc1098c2';
 export const API_KEY = 'ccd59ee269c01511ba763467045c115779fcae3050238a252f1bd1a4b65cfec6';
 export const SHARED_KEY = 'yayZ1';
 export const SHARED_STORE_KEY = 'yayZ1payment';
-export const API_VERSION_KEY = '214f86de09614a5a9970d8a3313f635e';
-export const API_VERSION_NAME = '3.32';
-export const VERSION_NAME = '3.32.0';
+export const API_VERSION_KEY = '4a522ab1f65a4418bf74ba69f99c1e1d';
+export const API_VERSION_NAME = '3.34';
+export const VERSION_NAME = '3.34.0';
 
 export const BASE_HOST = 'api.yay.space';
 export const BASE_API_URL = `https://${BASE_HOST}/`;
