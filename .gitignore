@@ -1,7 +1,6 @@
 build/
 
-test.ts
-test_compiled.ts
+*.test.ts
 cookie.json
 
 sample.*

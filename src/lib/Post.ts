@@ -189,6 +189,7 @@ export class PostAPI {
       route: `v3/posts/repost`,
       requireAuth: true,
       json: {
+        post_id: options.postId,
         text: options.text,
         font_size: options.fontSize,
         color: options.color,
