@@ -1,4 +1,5 @@
 import { createHash, createHmac } from 'crypto';
+import * as jwt from 'jsonwebtoken';
 import path from 'path';
 import util from 'util';
 import { API_KEY, API_VERSION_KEY, API_VERSION_NAME, SHARED_KEY } from './Constants';
@@ -6,18 +7,18 @@ import { Attachment, MessageTag } from './Models';
 import { YJSError } from './Errors';
 
 export const getFilenameAndExtension = (filePath: string): { filename: string; extension: string } => {
-	const filename: string = path.basename(filePath);
-	const extension: string = path.extname(filePath);
-	return { filename, extension };
+  const filename: string = path.basename(filePath);
+  const extension: string = path.extname(filePath);
+  return { filename, extension };
 };
 
 export const isValidImageFormat = (extension: string): boolean => {
-	return /\.(jpg|jpeg|png|gif)$/.test(extension);
+  return /\.(jpg|jpeg|png|gif)$/.test(extension);
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const getHashedFilename = (att: Attachment, type: string, key: number, uuid: string): string => {
-	return '';
+  return '';
 };
 
 /**
@@ -46,62 +47,67 @@ export const getHashedFilename = (att: Attachment, type: string, key: number, uu
  * @see https://github.com/ekkx/yay.js
  */
 export const mention = (options: { userId: number; displayName: string }): string => {
-	if (!options.displayName.length) {
-		throw new YJSError('displayNameは空白にできません。');
-	}
-	return `<@>${options.userId}:@${options.displayName}<@/>`;
+  if (!options.displayName.length) {
+    throw new YJSError('displayNameは空白にできません。');
+  }
+  return `<@>${options.userId}:@${options.displayName}<@/>`;
 };
 
 /** @ignore */
 export const buildMessageTags = (text: string): MessageTag[] => {
-	const messageTags: MessageTag[] = [];
-	const regex = /<@>(\d+):([^<]+)<@\/>/g;
-	let result;
+  const messageTags: MessageTag[] = [];
+  const regex = /<@>(\d+):([^<]+)<@\/>/g;
+  let result;
 
-	let offsetAdjustment = 0;
+  let offsetAdjustment = 0;
 
-	while ((result = regex.exec(text)) !== null) {
-		const fullMatchLength = result[0].length;
-		const displayNameLength = result[2].length;
+  while ((result = regex.exec(text)) !== null) {
+    const fullMatchLength = result[0].length;
+    const displayNameLength = result[2].length;
 
-		messageTags.push({
-			type: 'user',
-			userId: Number(result[1]),
-			offset: result.index - offsetAdjustment,
-			length: result[2].length,
-		});
+    messageTags.push({
+      type: 'user',
+      userId: Number(result[1]),
+      offset: result.index - offsetAdjustment,
+      length: result[2].length,
+    });
 
-		offsetAdjustment += fullMatchLength - displayNameLength;
-	}
+    offsetAdjustment += fullMatchLength - displayNameLength;
+  }
 
-	return messageTags;
+  return messageTags;
 };
 
 /** @ignore */
 export const getPostType = (options: Record<string, any>): string => {
-	if (options.choices) {
-		return 'survey';
-	} else if (options.sharedUrl) {
-		return 'shareable_url';
-	} else if (options.videoFileName) {
-		return 'video';
-	} else if (options.attachmentFileName) {
-		return 'image';
-	} else {
-		return 'text';
-	}
+  if (options.choices) {
+    return 'survey';
+  } else if (options.sharedUrl) {
+    return 'shareable_url';
+  } else if (options.videoFileName) {
+    return 'video';
+  } else if (options.attachmentFileName) {
+    return 'image';
+  } else {
+    return 'text';
+  }
+};
+
+export const generateJwt = (): string => {
+  const timestamp = Math.floor(Date.now() / 1000);
+  return jwt.sign({ exp: timestamp + 5, iat: timestamp }, Buffer.from(API_VERSION_KEY, 'utf-8'));
 };
 
 /** @ignore */
 export const md5 = (uuid: string, timestamp: number, requireSharedKey: boolean): string => {
-	const sharedKey: string = requireSharedKey ? SHARED_KEY : '';
-	return createHash('md5')
-		.update(API_KEY + uuid + timestamp.toString() + sharedKey)
-		.digest('hex');
+  const sharedKey: string = requireSharedKey ? SHARED_KEY : '';
+  return createHash('md5')
+    .update(API_KEY + uuid + timestamp.toString() + sharedKey)
+    .digest('hex');
 };
 
 /** @ignore */
 export const sha256 = (): string => {
-	const message = util.format('yay_android/%s', API_VERSION_NAME);
-	return createHmac('sha256', API_VERSION_KEY).update(message).digest('base64');
+  const message = util.format('yay_android/%s', API_VERSION_NAME);
+  return createHmac('sha256', API_VERSION_KEY).update(message).digest('base64');
 };

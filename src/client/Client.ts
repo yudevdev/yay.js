@@ -1453,7 +1453,7 @@ export class Client extends BaseClient {
 
 		return await this.postAPI.createPost({
 			...options,
-			jwt: await this.getWebSocketToken(),
+			jwt: util.generateJwt(),
 			postType: postType,
 			sharedUrl: sharedUrlObj,
 			messageTags: messageTags,
@@ -1497,7 +1497,7 @@ export class Client extends BaseClient {
 
 		return this.postAPI.createRepost({
 			...options,
-			jwt: await this.getWebSocketToken(),
+			jwt: util.generateJwt(),
 			postType: postType,
 			sharedUrl: sharedUrlObj,
 			messageTags: messageTags,
@@ -1553,7 +1553,7 @@ export class Client extends BaseClient {
 
 		return await this.postAPI.createThreadPost({
 			...options,
-			jwt: await this.getWebSocketToken(),
+			jwt: util.generateJwt(),
 			postType: postType,
 			sharedUrl: sharedUrlObj,
 			messageTags: messageTags,
@@ -1992,7 +1992,7 @@ export class Client extends BaseClient {
 	public getUsers = async (options: { userIds: number[] }): Promise<UsersResponse> => {
 		return await this.userAPI.getUsers({
 			...options,
-			jwt: await this.getWebSocketToken(),
+			jwt: util.generateJwt(),
 		});
 	};
 
