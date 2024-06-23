@@ -66,5 +66,8 @@
         "typedoc": "^0.25.2",
         "typedoc-theme-hierarchy": "^4.1.2",
         "typescript": "^5.2.2"
+    },
+    "volta": {
+        "node": "22.2.0"
     }
 }

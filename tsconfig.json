@@ -13,9 +13,9 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"baseUrl": "src",
-		"rootDir": "src",
+		"rootDir": "./",
 		"outDir": "build"
 	},
-	"include": ["src/**/*.ts"],
+	"include": ["src/**/*.ts", "*.test.ts"],
 	"exclude": ["node_modules"]
 }
