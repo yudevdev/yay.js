@@ -8,10 +8,10 @@
  *
  */
 export const Events: { [key: string]: string } = {
-	ChatRequest: 'chatRequest',
-	ChatRoomDelete: 'chatRoomDelete',
-	ClientReady: 'ready',
-	MessageCreate: 'messageCreate',
-	GroupUpdate: 'groupUpdate',
-	WebSocketTokenExpire: 'webSocketTokenExpire',
+  ChatRequest: 'chatRequest',
+  ChatRoomDelete: 'chatRoomDelete',
+  ClientReady: 'ready',
+  MessageCreate: 'messageCreate',
+  GroupUpdate: 'groupUpdate',
+  WebSocketTokenExpire: 'webSocketTokenExpire',
 };

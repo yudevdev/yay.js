@@ -6,66 +6,66 @@ import { BASE_API_URL } from './Constants';
 import { YJSLogger } from './Logger';
 
 export class REST {
-	private logger: YJSLogger;
-	private api: AxiosInstance;
+  private logger: YJSLogger;
+  private api: AxiosInstance;
 
-	public constructor(options: RESTOptions) {
-		this.logger = options.logger;
-		this.api = axios.create({
-			baseURL: options.baseURL ?? BASE_API_URL,
-			proxy: options.proxy,
-			timeout: options.timeout ?? 30000,
-			headers: options.defaultHeaders,
-			// eslint-disable-next-line @typescript-eslint/no-unused-vars
-			validateStatus: function (status) {
-				return true;
-			},
-		});
-	}
+  public constructor(options: RESTOptions) {
+    this.logger = options.logger;
+    this.api = axios.create({
+      baseURL: options.baseURL ?? BASE_API_URL,
+      proxy: options.proxy,
+      timeout: options.timeout ?? 30000,
+      headers: options.defaultHeaders,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      validateStatus: function (status) {
+        return true;
+      },
+    });
+  }
 
-	private filterRequests = (obj?: RequestObject): RequestObject | undefined => {
-		if (!obj) {
-			return undefined;
-		}
-		const newObj: RequestObject = {};
-		for (const key in obj) {
-			if (obj[key] !== undefined) {
-				newObj[key] = obj[key];
-			}
-		}
-		return newObj;
-	};
+  private filterRequests = (obj?: RequestObject): RequestObject | undefined => {
+    if (!obj) {
+      return undefined;
+    }
+    const newObj: RequestObject = {};
+    for (const key in obj) {
+      if (obj[key] !== undefined) {
+        newObj[key] = obj[key];
+      }
+    }
+    return newObj;
+  };
 
-	public request = async (options: RequestOptions): Promise<AxiosResponse> => {
-		const config: AxiosRequestConfig = {
-			method: options.method,
-			url: options.route,
-			params: this.filterRequests(options.params),
-			data: this.filterRequests(options.json),
-			headers: options.headers,
-			baseURL: options.baseURL,
-		};
+  public request = async (options: RequestOptions): Promise<AxiosResponse> => {
+    const config: AxiosRequestConfig = {
+      method: options.method,
+      url: options.route,
+      params: this.filterRequests(options.params),
+      data: this.filterRequests(options.json),
+      headers: options.headers,
+      baseURL: options.baseURL,
+    };
 
-		const requestDetails: string =
-			'Making API request:\n\n' +
-			`${JSON.stringify(config.method)}: ${JSON.stringify(config.url)}\n\n` +
-			`Parameters: ${JSON.stringify(config.params)}\n\n` +
-			`Headers: ${JSON.stringify(config.headers)}\n\n` +
-			`Body: ${JSON.stringify(config.data)}\n`;
+    const requestDetails: string =
+      'Making API request:\n\n' +
+      `${JSON.stringify(config.method)}: ${JSON.stringify(config.url)}\n\n` +
+      `Parameters: ${JSON.stringify(config.params)}\n\n` +
+      `Headers: ${JSON.stringify(config.headers)}\n\n` +
+      `Body: ${JSON.stringify(config.data)}\n`;
 
-		this.logger.debug(requestDetails);
+    this.logger.debug(requestDetails);
 
-		const response: AxiosResponse = await this.api(config);
+    const response: AxiosResponse = await this.api(config);
 
-		const { status, data } = response;
+    const { status, data } = response;
 
-		response.data = objectToCamel(data);
+    response.data = objectToCamel(data);
 
-		const responseDetails: string =
-			'Received API response:\n\n' + `Status code: ${status}\n\n` + `Response: ${JSON.stringify(response.data)}`;
+    const responseDetails: string =
+      'Received API response:\n\n' + `Status code: ${status}\n\n` + `Response: ${JSON.stringify(response.data)}`;
 
-		this.logger.debug(responseDetails);
+    this.logger.debug(responseDetails);
 
-		return response;
-	};
+    return response;
+  };
 }
